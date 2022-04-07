@@ -27,6 +27,11 @@ curl --location --request GET 'http://localhost:8081/products' \
 
 **Create Client**
 
+Admin : read:products create:products
+![](resources/mac-realm-admin-scope.png)
+
+Read : read:products
+![](resources/mac-realm-read-scope.png)
 
 
 ### References 
