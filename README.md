@@ -12,9 +12,16 @@ docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin
 curl --location --request POST 'http://localhost:8080/realms/mac-realm/protocol/openid-connect/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'grant_type=client_credentials' \
---data-urlencode 'client_id={CLIENT_ID}' \
---data-urlencode 'client_secret={CLIENT_SECRET}'
+--data-urlencode 'client_id=mac-realm-admin' \
+--data-urlencode 'client_secret=QwxekXXXXX' \
 --data-urlencode 'scope=read:products create:products'
+
+curl --location --request POST 'http://localhost:8080/realms/mac-realm/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=mac-realm-read' \
+--data-urlencode 'client_secret=00n3kBXXXXX' \
+--data-urlencode 'scope=read:products'
 ```
 
 ### Call API
