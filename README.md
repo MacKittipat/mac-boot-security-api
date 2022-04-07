@@ -14,6 +14,7 @@ curl --location --request POST 'http://localhost:8080/realms/mac-realm/protocol/
 --data-urlencode 'grant_type=client_credentials' \
 --data-urlencode 'client_id={CLIENT_ID}' \
 --data-urlencode 'client_secret={CLIENT_SECRET}'
+--data-urlencode 'scope=read:products create:products'
 ```
 
 ### Call API
