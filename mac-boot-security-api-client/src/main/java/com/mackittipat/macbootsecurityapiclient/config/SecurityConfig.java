@@ -10,7 +10,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.oauth2Client();
-        http.authorizeRequests()
-                .anyRequest().permitAll();
     }
 }
