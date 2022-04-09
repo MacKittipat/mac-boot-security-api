@@ -46,3 +46,4 @@ Read : read:products
 * https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/index.html
 * https://www.baeldung.com/spring-security-method-security
 * https://www.initgrep.com/posts/java/spring/spring-security-oauth2-jwt-authentication-resource-server
+* https://laurspilca.com/consuming-an-endpoint-protected-by-an-oauth-2-resource-server-from-a-spring-boot-service/

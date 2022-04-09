@@ -13,13 +13,13 @@ public class ProductController {
     @PreAuthorize("hasAuthority('read:products')")
     @GetMapping
     public String getProduct() {
-        return "Product";
+        return "Product " + System.currentTimeMillis();
     }
 
     @PreAuthorize("hasAuthority('create:products')")
     @PostMapping
     public String saveProduct() {
-        return "Save Product";
+        return "Save Product " + System.currentTimeMillis();
     }
 
 }
