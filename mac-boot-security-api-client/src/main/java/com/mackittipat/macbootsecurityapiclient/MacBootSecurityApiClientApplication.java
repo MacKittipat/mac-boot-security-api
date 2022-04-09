@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.security.oauth2.client.OAuth2AuthorizeRequest;
@@ -40,7 +41,7 @@ public class MacBootSecurityApiClientApplication implements CommandLineRunner {
 
         restTemplate.getInterceptors().add(
                 (HttpRequest request, byte[] body, ClientHttpRequestExecution execution) -> {
-                    request.getHeaders().set("Authorization", "Bearer " + accessToken.getTokenValue());
+                    request.getHeaders().set(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken.getTokenValue());
                     return execution.execute(request, body);
                 });
         String response = restTemplate.getForObject("http://localhost:8081/products", String.class);
